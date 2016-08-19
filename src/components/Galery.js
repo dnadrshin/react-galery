@@ -12,7 +12,6 @@ var Galery = React.createClass({
     }
   },
   imgSelect: function(e){
-    console.log(e.target.src);
     this.setState({
       selectImgUrl: e.target.src
     })
