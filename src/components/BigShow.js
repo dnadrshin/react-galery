@@ -11,16 +11,20 @@ var BigShow = React.createClass({
       height: this.props.settings.bigShow.height
     }
     return <div style={this.style}>
-		    	{(this.props.selectImgUrl!="")?
+		    	{
+		    		(this.props.selectImgUrl!="")?
 		    		/**
 		    		 * [style description]
 		    		 * @type {Object}
 		    		 */
-		    		(<img style={this.style} src={this.props.selectImgUrl}/>):
+		    		(<img 
+		    			style={style} 
+		    			src={this.props.selectImgUrl}/>):
 		    		/**
 		    		 * if img not select
 		    		 */
-		    		(<div>no select img</div>)}
+		    		(<div>no select img</div>)
+		    	}
 		   </div>
   }
 })

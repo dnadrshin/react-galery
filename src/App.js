@@ -8,7 +8,7 @@ const GalerySettings = {
         picHeight: '200px'
       },
       bigShow:{
-        height: '340px'
+        height: '600px'
       }
     }
 

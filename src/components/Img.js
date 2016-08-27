@@ -9,7 +9,7 @@ var Img = React.createClass({
      * @return {[String]} [margin]
      */
     let marginLeft = ()=>{
-       return (this.props.key==0)?'0':'14px'
+       return (this.props.keyD==0)?'0':'14px'
       }
     /**
      * [style object for img]
