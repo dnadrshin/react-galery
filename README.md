@@ -1,4 +1,4 @@
-## Small React Galery
+## Simple React Galery
 
 
 To install
