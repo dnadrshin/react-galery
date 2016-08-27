@@ -5,17 +5,10 @@ import Galery from './components/Galery';
 import galeryData from './galeryData';
 
 
-
-
 export class App extends Component {
-
     render() {
         return (
             <Galery initGalery={galeryData}/>
         );
     }
 }
-
-
-
-

@@ -20,7 +20,7 @@ let deleteImg = {
 
 
 var Img = React.createClass({
-  render: function(){
+  render(){
     return (
     <div>
       <img 

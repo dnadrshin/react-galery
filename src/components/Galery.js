@@ -6,17 +6,17 @@ import BigShow from './BigShow';
 
 
 var Galery = React.createClass({
-  getInitialState: function(){
+  getInitialState(){
     return {
-      selectImgUrl: ""
+      selectImgUrl: ''
     }
   },
-  imgSelect: function(e){
+  imgSelect(e){
     this.setState({
       selectImgUrl: e.target.src
     })
   },
-  render: function(){
+  render(){
     return (
       <div>
           <div className="galery_min">
