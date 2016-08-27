@@ -16,10 +16,18 @@ var Galery = React.createClass({
       selectImgUrl: e.target.src
     })
   },
+  galeryStyle:{
+  	display: 'flex',
+  	flexDirection: 'column'
+  },
+  galeryListStyle:{
+   	'display': 'flex',
+    'justifyContent': 'center' 	
+  },
   render(){
     return (
-      <div>
-          <div className="galery_min">
+      <div style={this.galeryStyle}>
+          <div className="galery_min" style={this.galeryListStyle}>
               {this.props.initGalery.map((item,i)=>{
                 return <Img key={i} keyD={i} srcData={item} imgSelect={this.imgSelect}/>          
               })
