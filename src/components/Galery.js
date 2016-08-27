@@ -29,12 +29,12 @@ var Galery = React.createClass({
       <div style={this.galeryStyle}>
           <div className="galery_min" style={this.galeryListStyle}>
               {this.props.initGalery.map((item,i)=>{
-                return <Img key={i} keyD={i} srcData={item} imgSelect={this.imgSelect}/>          
+                return <Img key={i} keyD={i} srcData={item} imgSelect={this.imgSelect} settings={this.props.settings}/>          
               })
           }
           </div>
           <div>
-            <BigShow selectImgUrl={this.state.selectImgUrl}/>
+            <BigShow selectImgUrl={this.state.selectImgUrl} settings={this.props.settings}/>
           </div>
       </div>
     )

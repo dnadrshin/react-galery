@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { NICE, SUPER_NICE } from './colors';
 
 import Galery from './components/Galery';
 import galeryData from './galeryData';
 
+const GalerySettings = {
+      list:{
+        picHeight: '200px'
+      },
+      bigShow:{
+        height: '340px'
+      }
+    }
 
 export class App extends Component {
     render() {
         return (
-            <Galery initGalery={galeryData}/>
+            <Galery initGalery={galeryData} settings={GalerySettings}/>
         );
     }
 }

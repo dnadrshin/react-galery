@@ -1,34 +1,24 @@
 import React, { Component } from 'react';
 
-let imgStyle ={
-  height: '120px',
-  float: 'left',
-  marginLeft: '14px',
-  cursor: 'pointer'
-}
-
-let deleteImg = {
-  width: '30px',
-  height: '30px',
-  borderRadius: '30px',
-  background: '#fff',
-  color: '#000',
-  position: 'absolute',
-  right: '0px',
-  cursor: 'pointer'
-}
-
-
 var Img = React.createClass({
   render(){
+    let imgStyle={
+      height: this.props.settings.list.picHeight,
+      float: 'left',
+      marginLeft: '14px',
+      cursor: 'pointer'
+    }
+    let firstImgStyle ={
+      height:  this.props.settings.list.picHeight,
+      float: 'left',
+      cursor: 'pointer'
+    }
     return (
     <div>
       <img 
-        style={imgStyle} 
-        key={this.props.keyD} 
+        style={(this.props.keyD==0)?firstImgStyle:imgStyle} 
         src={this.props.srcData.img}
         onClick={this.props.imgSelect}/>
-      <div style={deleteImg}>-</div>
     </div>
     )
   }
