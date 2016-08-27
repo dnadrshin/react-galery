@@ -1,7 +1,6 @@
-# Small React Galery
+## Simple React Galery
 
 
 To install
-
-npm install
-npm start
+* npm install
+* npm start
