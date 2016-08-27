@@ -1,7 +1,7 @@
 var galeryData = [
-  {img:'http://orto.zaimi24.ru/upload/medialibrary/244/2447ae83b54e924925eee7e4593ee613.jpg',name:'pic1'},
-  {img:'http://orto.zaimi24.ru/upload/medialibrary/574/5743137110af183cfb4b274d437a50f0.jpg',name:'pic2'},
-  {img:'http://orto.zaimi24.ru/upload/medialibrary/574/5743137110af183cfb4b274d437a50f0.jpg',name:'pic3'}
+  {img:'https://raw.githubusercontent.com/dnadrshin/react-galery/master/src/img/berlin.JPG',name:'pic1'},
+  {img:'https://raw.githubusercontent.com/dnadrshin/react-galery/master/src/img/dresden.JPG',name:'pic2'},
+  {img:'https://raw.githubusercontent.com/dnadrshin/react-galery/master/src/img/pragua.JPG',name:'pic3'}
 ];
 
 export default galeryData;
