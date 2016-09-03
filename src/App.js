@@ -15,7 +15,7 @@ const GalerySettings = {
 export class App extends Component {
     render() {
         return (
-            <Galery initGalery={galeryData} settings={GalerySettings}/>
+          <Galery initGalery={galeryData} settings={GalerySettings}/>
         );
     }
 }

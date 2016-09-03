@@ -20,6 +20,7 @@ var Img = React.createClass({
       float: 'left',
       marginLeft: '14px',
       cursor: 'pointer',
+      //'pointerEvents': 'none',
       marginLeft: marginLeft()
     }
     return (
@@ -28,7 +29,6 @@ var Img = React.createClass({
         style={imgStyle} 
         src={this.props.srcData.img}
         onClick={this.props.imgSelect}/>
-        {this.props.key}
     </div>
     )
   }

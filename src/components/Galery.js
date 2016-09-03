@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Img from './Img';
 import BigShow from './BigShow';
+import ScrollButton from './ScrollButton';
 
-
+let galeryWidth = 800;
 
 var Galery = React.createClass({
   getInitialState(){
     return {
-      selectImgUrl: ''
+      selectImgUrl: '',
+      position: 0
     }
   },
   imgSelect(e){
@@ -20,18 +22,44 @@ var Galery = React.createClass({
   	display: 'flex',
   	flexDirection: 'column'
   },
-  galeryListStyle:{
-   	'display': 'flex',
-    'justifyContent': 'center' 	
+  clickHandlerLeft(direction){
+  		if(this.state.position<0)this.setState({position: this.state.position + 140});
   },
+  clickHandlerRight(direction){
+  		if(this.state.position>-galeryWidth)this.setState({position: this.state.position - 140});
+  },
+
+
   render(){
+  	let galeryListStyle = {
+    	'width': galeryWidth+'px',
+    	'margin': 'auto',
+    	'overflow': 'hidden',
+    	'userSelect': 'none',
+    	'WebkitUserSelect': 'none',
+    	'position': 'relative'
+  	}
+  	let galeryListScrollStyle = {
+  		'display': 'flex',
+    	//'justifyContent': 'center',
+    	'flexWrap': 'nowrap',
+    	'position': 'relative',
+    	'left': this.state.position + 'px',
+    	'transition': 'all 0.5s ease-in-out'
+  	}
+
     return (
       <div style={this.galeryStyle}>
-          <div className="galery_min" style={this.galeryListStyle}>
-              {this.props.initGalery.map((item,i)=>{
-                return <Img key={i} keyD={i} srcData={item} imgSelect={this.imgSelect} settings={this.props.settings}/>          
-              })
-          }
+          <div className="galery_min" style={galeryListStyle}>
+          		<ScrollButton onClick={this.clickHandlerLeft}/>
+          		<div className="galery_min-scroll" style={galeryListScrollStyle}>
+          			
+	              {this.props.initGalery.map((item,i)=>{
+	                return <Img key={i} keyD={i} srcData={item} imgSelect={this.imgSelect} settings={this.props.settings}/>          
+	              })}
+	              	
+          		</div>
+          		<ScrollButton direction={'right'} onClick={this.clickHandlerRight}/>
           </div>
           <div>
             <BigShow selectImgUrl={this.state.selectImgUrl} settings={this.props.settings}/>
