@@ -5,37 +5,28 @@ class ScrollButton extends Component {
 
 
     render() {
-	    let leftScrollStyle = {
+    	let ScrollStyle = {
 	  		'width': '30px',
 	  		'height': '30px',
 	  		'borderRadius': '30px',
 	  		'background': '#fff',
-		   	'display': 'flex',
 		    'justifyContent': 'center',
 		    'position': 'absolute',
-		    'left': '0',
 		    'cursor': 'pointer',
 		    'zIndex': 1,
-		    'top': '80'
-	  	}
-	  	let rightScrollStyle = {
-	  		'width': '30px',
-	  		'height': '30px',
-	  		'borderRadius': '30px',
-	  		'background': '#fff',
-		   	'display': 'flex',
-		    'justifyContent': 'center',
-		    'position': 'absolute',
-		    'right': '0',
-		    'cursor': 'pointer',
-		    'zIndex': 1,
-		    'top': '80'
+		    'top': '80'    		
+    	}
+	    let leftScrollStyle = Object.assign({}, ScrollStyle, {'left':'7px'})
+	  	let rightScrollStyle = Object.assign({}, ScrollStyle, {'right':'7px'})
+	  	let imgStyle = {
+	  		'width': '20px'
 	  	}
         return (
             <div 
             style={this.props.direction=='right'?rightScrollStyle:leftScrollStyle}
-            onClick={this.props.onClick}
-            >--</div>
+            onClick={this.props.onClick}>
+            	{this.props.direction=='right'?<img style={imgStyle} src="/public/img/arrow-right.png"/>:<img style={imgStyle} src="/public/img/arrow-left.png"/>}
+            </div>
         );
     }
 }
