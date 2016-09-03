@@ -26,7 +26,7 @@ var Galery = React.createClass({
   		if(this.state.position<0)this.setState({position: this.state.position + 140});
   },
   clickHandlerRight(direction){
-  		if(this.state.position>-galeryWidth)this.setState({position: this.state.position - 140});
+  		if(this.state.position>-galeryWidth-200)this.setState({position: this.state.position - 140});
   },
 
 
