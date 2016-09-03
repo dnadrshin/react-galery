@@ -6,10 +6,13 @@ class ScrollButton extends Component {
 
     render() {
     	let ScrollStyle = {
+    		'border': '2px solid gray',
 	  		'width': '30px',
 	  		'height': '30px',
 	  		'borderRadius': '30px',
 	  		'background': '#fff',
+	  		'display': 'flex',
+	  		'alignItems': 'center',
 		    'justifyContent': 'center',
 		    'position': 'absolute',
 		    'cursor': 'pointer',
