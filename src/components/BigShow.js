@@ -4,11 +4,13 @@ var BigShow = React.createClass({
 	style: {
 		'display': 'flex',
 	    'justifyContent': 'center',
-	    'padding': '20px'
+	    'padding': '14px',
+	    'alignItems': 'center'
 	},
   render (){
     var style = {
-      height: this.props.settings.bigShow.height
+      //height: this.props.settings.bigShow.height;
+      width: this.props.settings.bigShow.width
     }
     return <div style={this.style}>
 		    	{
