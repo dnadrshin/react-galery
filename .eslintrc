@@ -23,5 +23,7 @@
   "plugins": [
     "babel",
     "react"
-  ]
+  ],
+      "extends": "eslint:recommended"
+
 }

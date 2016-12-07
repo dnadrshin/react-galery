@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 var Img = React.createClass({
 
@@ -18,7 +18,6 @@ var Img = React.createClass({
     let imgStyle={
       height: this.props.settings.list.picHeight,
       float: 'left',
-      marginLeft: '14px',
       cursor: 'pointer',
       //'pointerEvents': 'none',
       marginLeft: marginLeft()

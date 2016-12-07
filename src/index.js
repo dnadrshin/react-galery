@@ -5,11 +5,6 @@ import { Provider } from 'react-redux'
 import { App } from './App';
 import reducer from './reducer';
 
-const initialState = {
-	photos: [],
-	selectPhoto: 0
-}
-
 const store = createStore(reducer);
 
 render(
