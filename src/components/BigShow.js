@@ -7,30 +7,22 @@ var BigShow = React.createClass({
 			'padding': '14px',
 			'alignItems': 'center'
 	},
-  render (){
-    var style = {
-			//todo: dfsdfsd
-      //height: this.props.settings.bigShow.height;
-      width: this.props.settings.bigShow.width
-    }
-    return <div style={this.style}>
+
+	render (){
+		var style = {
+			width: this.props.settings.bigShow.width
+		}
+		return <div style={this.style}>
 			{
-				(this.props.selectImgUrl!='')?
-				/**
-				 * [style description]
-				 * @type {Object}
-				 */
-				(<img 
-					style={style} 
-					src={this.props.selectImgUrl}/>):
-				/**
-				 * if img not select
-				 */
-				(<div>no select img</div>)
+				(this.props.selectImgUrl!='')
+				? <img
+					style={style}
+					src={this.props.selectImgUrl}
+				/>
+				: <div>no select img</div>
 			}
 		</div>
-  }
+	}
 })
- 
 
 export default BigShow;
