@@ -2,10 +2,10 @@ import React from 'react';
 
 var BigShow = React.createClass({
 	style: {
-			'display': 'flex',
+			'display'       : 'flex',
 			'justifyContent': 'center',
-			'padding': '14px',
-			'alignItems': 'center'
+			'padding'       : '14px',
+			'alignItems'    : 'center'
 	},
 
 	render (){

@@ -8,6 +8,7 @@ const
 		list:{
 			picHeight: '200px'
 		},
+
 		bigShow:{
 			height: '600px',
 			width : '800px'

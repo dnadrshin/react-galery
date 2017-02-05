@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 
-
 class ScrollButton extends Component {
 	render() {
 		let ScrollStyle = {
-			'border': '2px solid gray',
-			'width': '30px',
-			'height': '30px',
-			'borderRadius': '30px',
-			'background': '#fff',
-			'display': 'flex',
-			'alignItems': 'center',
+			'border'        : '2px solid gray',
+			'width'         : '30px',
+			'height'        : '30px',
+			'borderRadius'  : '30px',
+			'background'    : '#fff',
+			'display'       : 'flex',
+			'alignItems'    : 'center',
 			'justifyContent': 'center',
-			'position': 'absolute',
-			'cursor': 'pointer',
-			'zIndex': 1,
-			'top': '80'
+			'position'      : 'absolute',
+			'cursor'        : 'pointer',
+			'zIndex'        : 1,
+			'top'           : '80'
 		},
 
 		leftScrollStyle = Object.assign({}, ScrollStyle, {'left':'7px'}),
@@ -30,7 +29,10 @@ class ScrollButton extends Component {
 				style={this.props.direction=='right'?rightScrollStyle:leftScrollStyle}
 				onClick={this.props.onClick}
 			>
-				{this.props.direction=='right'?<img style={imgStyle} src="/public/img/arrow-right.png"/>:<img style={imgStyle} src="/public/img/arrow-left.png"/>}
+				{this.props.direction=='right'
+					? <img style={imgStyle} src="/public/img/arrow-right.png"/>
+					: <img style={imgStyle} src="/public/img/arrow-left.png"/>
+				}
 			</div>
 		);
 	}
